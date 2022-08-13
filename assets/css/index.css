@@ -62,7 +62,7 @@ h3 {
     height: 50vh;
   }
   .add-player {
-    bottom: 5%;
+    margin-top: 8%;
   }
 }
 @media (min-device-height: 701px) and (max-device-height: 849px) {
@@ -83,7 +83,7 @@ h3 {
     height: 50vh;
   }
   .add-player {
-    bottom: 5%;
+    margin-top: 8%;
   }
 }
 @media (min-device-height: 850px) {
@@ -104,6 +104,6 @@ h3 {
     height: 60vh;
   }
   .add-player {
-    bottom: 10%;
+    margin-top: 8%;
   }
 }/*# sourceMappingURL=index.css.map */

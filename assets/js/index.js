@@ -68,7 +68,10 @@ function switchDict(pageload) {
 const synergyList = [
     {players: ["Anthony", "Mateus"], bonus: 1},
     {players: ["Anthony", "Ethan"], bonus: 1},
-    {players: ["Ethan", "Vihan"], bonus: 1}
+    {players: ["Ethan", "Vihan"], bonus: 1},
+    {players: ["Harry", "Mateus"], bonus: 10},
+    {players: ["Abhijay", "Kevin"], bonus: 1},
+    
 ]
 
 let alphabetizedDict = {};

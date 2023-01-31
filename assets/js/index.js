@@ -46,11 +46,13 @@ const newPlayerDict = { // courtesy of kevin and abhijay
     "Haesu": 3
 }
 
-const playerDict = {}
+const playerDict = {
+    "test": 1
+}
 
 
 function switchDict(pageload) {
-    if (pageload) {
+    if (1) {
         playerDict = oldPlayerDict;
         document.getElementById("tierSwitcher").innerHTML = "Use New Tiers";
     } else {
@@ -203,5 +205,5 @@ function alphabetizeDictionary () {
     tempArray.forEach(name => alphabetizedDict[name] = playerDict[name]);
 }
 
+switchDict(1);
 generateCheckboxes();
-switchDict(true);

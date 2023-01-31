@@ -1,4 +1,4 @@
-const playerDict = {
+const oldPlayerDict = {
     "Harry": 7,
     "Mateus": 7,
     "Anthony": 6,
@@ -22,6 +22,47 @@ const playerDict = {
     "Allen": 2,
     "Praveen": 2,
     "Nash": 2
+}
+
+const newPlayerDict = { // courtesy of kevin and abhijay
+    "Harry": 6,
+    "Mateus": 7,
+    "Anthony": 5,
+    "Anirudh": 4,
+    "Kevin": 6,
+    "Ethan": 3,
+    "Andrew": 2,
+    "Pranav": 5,
+    "Dinesh": 2,
+    "Eyaad": 4,
+    "Abhijay": 6,
+    "Devam": 2,
+    "Vihan": 3,
+    "Neil": 2,
+    "Nick": 2,
+    "Allen": 1,
+    "Praveen": 4,
+    "Nash": 4,
+    "Haesu": 3
+}
+
+const playerDict = {}
+
+
+function switchDict(pageload) {
+    if (pageload) {
+        playerDict = oldPlayerDict;
+        document.getElementById("tierSwitcher").innerHTML = "Use New Tiers";
+    } else {
+        if (playerDict.equals(oldPlayerDict)) {
+            playerDict = newPlayerDict;
+            document.getElementById("tierSwitcher").innerHTML = "Use Old Tiers";
+        }
+        if (playerDict.equals(newPlayerDict)) {
+            playerDict = oldPlayerDict;
+            document.getElementById("tierSwitcher").innerHTML = "Use New Tiers";
+        }
+    }
 }
 
 const synergyList = [
@@ -133,7 +174,7 @@ function createCheckbox(name) { //creates checkbox
     checkbox.value = playerDict[name];
 
     let label = document.createElement("label");
-    label.innerHTML = name;
+    label.innerHTML = name + " (" + playerDict[name] + ")";
 
     listElement.appendChild(checkbox);
     listElement.appendChild(label);
@@ -160,3 +201,4 @@ function alphabetizeDictionary () {
 }
 
 generateCheckboxes();
+switchDict(true);
